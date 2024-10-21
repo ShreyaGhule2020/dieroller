@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="die.gif" alt="" id="dice" height="100px" />
+    <br> <br>
+    <button type="button" onclick="rollDice()">Roll The Dice</button>
+
+    <script>
+        const diceImg = document.getElementById("dice");
+        function rollDice() {
+            const min = 1;
+            const max = 7;
+            const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            if (randomNumber == 1) {
+                diceImg.src = "one.gif";
+            }
+            else if (randomNumber == 2) {
+                diceImg.src = "two.gif";
+            }
+            else if (randomNumber == 3) {
+                diceImg.src = "three.gif";
+            }
+            else if (randomNumber == 4) {
+                diceImg.src = "four.jpg";
+            }
+            else if (randomNumber == 5) {
+                diceImg.src = "five.jpg";
+            }
+            else {
+                diceImg.src = "six.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
