@@ -2,10 +2,15 @@
 <html>
 <head>
     <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+    </style>
 </head>
 
 <body>
-    <img src="die.gif" alt="" id="dice" height="100px" />
+    <img src="images/die.gif" alt="" id="dice" height="100px" />
     <br> <br>
     <button type="button" onclick="rollDice()">Roll The Dice</button>
 
@@ -16,22 +21,22 @@
             const max = 7;
             const randomNumber = Math.floor(Math.random() * (max - min)) + min;
             if (randomNumber == 1) {
-                diceImg.src = "one.gif";
+                diceImg.src = "images/one.gif";
             }
             else if (randomNumber == 2) {
-                diceImg.src = "two.gif";
+                diceImg.src = "images/two.gif";
             }
             else if (randomNumber == 3) {
-                diceImg.src = "three.gif";
+                diceImg.src = "images/three.gif";
             }
             else if (randomNumber == 4) {
-                diceImg.src = "four.jpg";
+                diceImg.src = "images/four.jpg";
             }
             else if (randomNumber == 5) {
-                diceImg.src = "five.jpg";
+                diceImg.src = "images/five.jpg";
             }
             else {
-                diceImg.src = "six.jpg";
+                diceImg.src = "images/six.jpg";
             }
         }
     </script>
