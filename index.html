@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Document</title>
-    <style>
-        body{
-            background-color: aqua;
-        }
-    </style>
+    <title>Dice Roller</title>
+     <style>
+      body{
+        background-color: rgb(59, 253, 253);
+      }
+      .name{
+        font-size: 30px;
+        font-family: cursive;
+        text-align: center;
+        color: rgb(99, 2, 99);
+      }
+      .container{
+        width:400px;
+        height: 400px;
+        border:10px double rgb(194, 2, 2);
+        border-radius: 15px;
+        display: block;
+        background-color: khaki;
+        margin: 100px auto;
+      }
+      .img-dice{
+        width:200px;
+        display: block;
+        margin: 20px auto ;
+      }
+      .btn-roll{
+        display: block;
+        margin: auto;
+        background-color: rgb(245, 228, 206);
+        color: darkslategrey;
+        font-size: 25px;
+        padding: 10px 40px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+     </style>
+
 </head>
-
 <body>
-    <img src="images/die.gif" alt="" id="dice" height="100px" />
-    <br> <br>
-    <button type="button" onclick="rollDice()">Roll The Dice</button>
-
+    <div class="container">
+        <h1 class="name">Dice Roller</h1>
+    <img src="images/die.png" class="img-dice" id="img-dice" />
+    <button type="button" class="btn-roll" onclick="rollDice()">
+        Roll The Dice
+    </button>
+     </div>
     <script>
-        const diceImg = document.getElementById("dice");
         function rollDice() {
             const min = 1;
             const max = 7;
             const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            const diceImg = document.getElementById('img-dice');
             if (randomNumber == 1) {
-                diceImg.src = "images/one.gif";
+                diceImg.src = "images/die1.png";
             }
             else if (randomNumber == 2) {
-                diceImg.src = "images/two.gif";
+                diceImg.src = "images/die2.png";
             }
             else if (randomNumber == 3) {
-                diceImg.src = "images/three.gif";
+                diceImg.src = "images/die3.png";
             }
             else if (randomNumber == 4) {
-                diceImg.src = "images/four.jpg";
+                diceImg.src = "images/die4.png";
             }
             else if (randomNumber == 5) {
-                diceImg.src = "images/five.jpg";
+                diceImg.src = "images/die5.png";
             }
             else {
-                diceImg.src = "images/six.jpg";
+                diceImg.src = "images/die6.png";
             }
         }
     </script>
